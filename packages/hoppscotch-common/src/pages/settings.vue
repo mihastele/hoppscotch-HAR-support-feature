@@ -92,6 +92,11 @@
                   {{ t("layout.zen_mode") }}
                 </SmartToggle>
               </div>
+              <div class="flex items-center">
+                <SmartToggle :on="HAR_LISTENING" @change="toggleHARListening">
+                  {{ t("settings.har_capture") }}
+                </SmartToggle>
+              </div>
             </div>
           </section>
         </div>
@@ -265,6 +270,7 @@ const TELEMETRY_ENABLED = useSetting("TELEMETRY_ENABLED")
 const EXPAND_NAVIGATION = useSetting("EXPAND_NAVIGATION")
 const SIDEBAR_ON_LEFT = useSetting("SIDEBAR_ON_LEFT")
 const ZEN_MODE = useSetting("ZEN_MODE")
+const HAR_LISTENING = useSetting("HAR_LISTENING")
 
 const currentExtensionStatus = useReadonlyStream(extensionStatus$, null)
 
@@ -327,6 +333,9 @@ const showConfirmModal = () => {
   else toggleSetting("TELEMETRY_ENABLED")
 }
 
+const toggleHARListening = () => {
+  toggleSetting("HAR_LISTENING")
+}
 const resetProxy = () => {
   applySetting("PROXY_URL", `https://proxy.hoppscotch.io/`)
   clearIcon.value = IconCheck

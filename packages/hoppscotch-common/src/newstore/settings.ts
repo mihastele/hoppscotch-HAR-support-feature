@@ -51,6 +51,7 @@ export type SettingsDef = {
   ZEN_MODE: boolean
   FONT_SIZE: HoppFontSize
   COLUMN_LAYOUT: boolean
+  HAR_LISTENING: boolean
 }
 
 export const defaultSettings: SettingsDef = {
@@ -77,6 +78,7 @@ export const defaultSettings: SettingsDef = {
   ZEN_MODE: false,
   FONT_SIZE: "small",
   COLUMN_LAYOUT: true,
+  HAR_LISTENING: false,
 }
 
 type ApplySettingPayload = {

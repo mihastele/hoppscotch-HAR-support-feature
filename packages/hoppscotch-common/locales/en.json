@@ -464,6 +464,7 @@
     "font_size_large": "Large",
     "font_size_medium": "Medium",
     "font_size_small": "Small",
+    "har_capture": "Capture HAR packets",
     "interceptor": "Interceptor",
     "interceptor_description": "Middleware between application and APIs.",
     "language": "Language",
